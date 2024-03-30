@@ -5,11 +5,16 @@ import sklearn
 
 with open('logistic_model_final.pkl', 'rb') as file:
     model = pickle.load(file)
+    
+
 
 def predict_property_damage(features):
     return model.predict([features])
 
 def main():
+    
+
+    
     st.title("Heart Disease Risk Prediction")
     
     
@@ -74,11 +79,27 @@ def main():
         
         
         result = "High" if prediction[0] == 1 else "Low"
+        
 
         
         st.markdown(f"<h3 style='color: black;font-size: 24px'>Based from the Machine Learning model, your risk of developing Cardiovascular Disease (CVD) is:</h3>", unsafe_allow_html=True)
         st.markdown(f"<h3 style='color: red;font-size: 30px'>Risk: {result}</h3>", unsafe_allow_html=True)
 
+                # Provide safety recommendations
+        if prediction[0] == 1:
+            st.warning("High risk predicted. Please consider the following prevention measures:")
+            st.write("- Avoid sedentary lifestyles")
+            st.write("- Be careful when you have Smoking History")
+            st.write("- Comorbidities: The presence of comorbidities like arthritis, diabetes, depression, skin cancer, and other cancers was associated with an increased risk of heart disease. These conditions may share underlying biological mechanisms or contribute to lifestyle factors that exacerbate cardiovascular risk.")
+            st.write("- Remember regular Checkup")
+        else:
+            st.success("Lower risk predicted. Keep alarm and consider the following prevention measures :")
+            st.write("- Avoid sedentary lifestyles")
+            st.write("- Remember regular Checkup")
+
+        
+        
+        
         
 if __name__ == "__main__":
     main()
