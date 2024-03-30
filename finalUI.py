@@ -30,7 +30,9 @@ def main():
 
     
     st.image('plot2.jpg', caption='Correlation heatmap')
-
+    st.image('plot3.png', caption='ROC')
+    
+    
     st.title("Logistic regression model prediction, F1 Score: 0.8839 ")
     
     
