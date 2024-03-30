@@ -29,7 +29,7 @@ def main():
     st.image('finalplot1.png', caption='Feature Importances for Logistic Regression')
 
     
-    st.image('plot2.jpg', caption='Correlation heatmap')
+    st.image('plot2.JPG', caption='Correlation heatmap')
     st.image('plot3.png', caption='ROC')
     
     
