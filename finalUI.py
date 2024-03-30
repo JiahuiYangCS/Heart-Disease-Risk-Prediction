@@ -6,6 +6,8 @@ import sklearn
 with open('logistic_model_final.pkl', 'rb') as file:
     model = pickle.load(file)
     
+# Find emoji here: https://www.webfx.com/tools/emoji-cheat-sheet/
+st.set_page_config(page_title="Heart Disease Risk Prediction", page_icon=":🫀:")
 
 
 def predict_property_damage(features):
