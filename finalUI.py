@@ -14,9 +14,11 @@ def main():
     
     
     st.write("""
-        This app can help predict your risk of heart disease. This program is based on 300,000 pieces of physical health data and trained on logistic regression models. After comparing multiple models such as Decision Tree, Random Forest, K-Nearest Neighbor, GaussianNB, and comparing multiple methods such as PCA and smote , the logistic regression model with the highest F1 score was selected for training and prediction.
+        This app can help predict your risk of heart disease. 
     """)
-    
+    st.write("""
+        This program is based on 300,000 pieces of physical health data and trained on logistic regression models. After comparing multiple models such as Decision Tree, Random Forest, K-Nearest Neighbor, GaussianNB, and comparing multiple methods such as PCA and smote , the logistic regression model with the highest F1 score was selected for training and prediction.
+    """)
     
     st.image('HeartDiseaseRisk.jpg', caption='Heart Disease Risk Prediction')
 
